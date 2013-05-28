@@ -7,6 +7,10 @@ gem 'thin'
 gem 'sinatra-contrib'
 gem 'racksh'
 gem 'awesome_print'
-gem 'pry'
-gem 'pry-debugger'
 gem 'rake'
+gem "factory_girl"
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-debugger'
+end
