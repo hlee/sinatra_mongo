@@ -1,0 +1,56 @@
+!!!5
+
+%html
+  %head
+    %script{:src => '/js/jquery-1.8.min.js'}
+    %script{:src => '/js/bootstrap.min.js'}
+    %link{:rel => 'stylesheet', :href => '/styles/index.css'}
+    %link{:rel => 'stylesheet', :href => '/styles/bootstrap.min.css'}
+    %script{:src => 'http://juo/js-lib/jquery-1.9.1.min.js'}
+    %script{:src => 'http://juo/js-lib/bootstrap/js/bootstrap.min.js'}
+    %link{:rel => 'stylesheet', :href => '/styles/index.css'}
+    %link{:rel => 'stylesheet', :href => 'http://juo/js-lib/bootstrap/css/bootstrap.min.css'}
+  %body.bg
+  
+    = haml :header
+
+    .container
+      .row{:style => 'background-image: url("img/bg.png");box-shadow: -2px 4px 5px rgba(0,0,0,.5);'}
+      .row{:style => 'background-image: url("images/bg.png");box-shadow: -2px 4px 5px rgba(0,0,0,.5);'}
+      
+        -#= haml :leftside
+
+        -#.span10.maincontent{:style => 'margin-left:0px;background-color:#FFFFFF;width:80%;min-height:300px;'}
+          -#.title Home
+          -#.container-fluid{:style => 'margin:10px;padding:0px;'}
+            -#.row-fluid
+              -#.span2.panel
+                -#.panel-title Members
+                -#.panel-content
+                  -#%ul.user-list
+                    -#- @auth.team.members.each do |mem|
+                      -#%li
+                        -#%i.icon-user
+                        -#=mem.name
+              -#- unless @today_plan.nil?
+                -#.row-fluid
+                  -#.span9
+                    -#.panel.span3
+                      -#.panel-title Today plan
+                      -#.panel-content= @today_plan.plan
+                    -#.panel.span3
+                      -#.panel-title Note of this week workplan
+                      -#.panel-content= @last_rep.note
+                  -#.row-fluid
+                    -#.span9
+                      -#.panel.span3
+                        -#.panel-title Yesterday completed
+                        -#.panel-content= @today_plan.plan
+              -#- else
+                -#.span9
+                  -#.alert.alert-info Please contact the team leader to create a week's work report
+
+    = haml :bottom
+            
+
+        

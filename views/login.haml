@@ -1,0 +1,12 @@
+!!!5
+
+%html
+  %head
+  %body
+    %p= @msg
+    %form{:action => '/login', :method => 'post'}
+      %label UserName:
+      %input{:name => 'username'}
+      %label Password:
+      %input{:name => 'password',:type => 'password'}
+      %input{:type => 'submit', :value => 'login'}

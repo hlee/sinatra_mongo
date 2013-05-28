@@ -1,0 +1,17 @@
+.container-fluid.header-title.bg
+  .container
+    .row
+      .span6 
+        %h1 Work Report
+      .span1.ele-pd
+        %i.icon-user.icon-white
+        = @auth.name
+      .span.ele-pd{:class => 'span1.5'}
+        %i.icon-magnet.icon-white
+        = @auth.team.name
+      .span2.ele-pd
+        %i.icon-time.icon-white 
+        = Date.today
+      .account-separator
+      .span2.logout.ele-pd
+        %a{:href => '/logout', :class => 'btn btn-small btn-primary'} Logout
