@@ -1,10 +1,10 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'sinatra/json'
 require 'mongoid'
 require 'haml'
 require 'ap'
 require './models'
-#require 'pry'
+require 'pry'
 
 env = ENV['RACK_ENV'] || :development
 Mongoid.load!(File.join(File.dirname(__FILE__), "config", "mongoid.yml"), env)
