@@ -1,3 +1,4 @@
+require File.expand_path '../models', __FILE__
 FactoryGirl.define do
   factory :team do
     name 'King'
@@ -21,6 +22,4 @@ FactoryGirl.define do
       leadOf {team}
     end
   end
-
-
 end
