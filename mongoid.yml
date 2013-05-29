@@ -4,6 +4,12 @@ development:
       database: workreport
       hosts:
         - localhost:27017
+test:
+  sessions:
+    default:
+      database: workreport
+      hosts:
+        - localhost:27017
 production:
   sessions:
     default:
