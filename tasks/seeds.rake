@@ -1,5 +1,5 @@
 require 'factory_girl'
-require 'pry'
+#require 'pry'
 require 'mongoid'
 require_relative '../factories'
 include FactoryGirl::Syntax::Methods
