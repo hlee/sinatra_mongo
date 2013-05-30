@@ -38,7 +38,7 @@ end
 
 ## Where
 Heroku:<br/>
-http://sinatra-db.herokuapp.com
+http://sinatra-db.herokuapp.com<br/>
 User: admin<br/>
 Password: password<br/>
 
